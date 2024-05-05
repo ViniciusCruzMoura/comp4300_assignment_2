@@ -623,11 +623,6 @@ void Game::s_user_input() {
     //     m_player->c_input->left = false;
     //     m_player->c_input->right = false;
     // }
-
-    // if (IsKeyPressed(KEY_SPACE)) {
-    //     std::cout << "SPACE Key Pressed" << std::endl;
-    //     set_pause(!m_paused);
-    // }
     
     //Pressed
     if (IsKeyPressed(KEY_S)) {
