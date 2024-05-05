@@ -52,19 +52,6 @@ std::vector<std::vector<std::string>> load_csv(const std::string path)
     file.close();
 
     return data;
-
-    // // Check if the dimensions of data match the dimensions of map
-    // if (data.size() != TILEMAP_SIZE_H || (data.size() > 0 && data[0].size() != TILEMAP_SIZE_W)) {
-    //     std::cerr << "Vector dimensions do not match array dimensions\n";
-    //     return;
-    // }
-
-    // // Convert to 2D array
-    // for (int i = 0; i < TILEMAP_SIZE_H; ++i) {
-    //     for (int j = 0; j < TILEMAP_SIZE_W; ++j) {
-    //         map[i][j] = std::stoi(data[i][j]);
-    //     }
-    // }
 }
 
 // load_csv(../assets/map/map1.csv);
