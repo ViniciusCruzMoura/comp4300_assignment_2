@@ -547,7 +547,7 @@ void Game::spawn_enemy() {
             rand() % static_cast<int>(m_windows.get_size().x), 
             rand() % static_cast<int>(m_windows.get_size().y)
         ),
-        Vec2(1.0f, 1.0f), 0.0f
+        Vec2(5.0f, 5.0f), 0.0f
     );
     //add a shape
     enemy->c_shape = std::make_shared<CShape>(rand() % (32 - 24) + 24, rand() % (10 - 3) + 3, BLUE, RED, 4.0f);
@@ -687,7 +687,7 @@ void Game::s_user_input() {
 
 void Game::s_movement() {
     // m_player->c_shape->circle.set_position(m_player->c_transform->pos.x, m_player->c_transform->pos.y);
-    m_player->c_transform->angle += 1.0f;
+    m_player->c_transform->angle += 5.0f;
     m_player->c_shape->circle.set_rotation(m_player->c_transform->angle);
     // if (m_player->c_transform->pos.x > GetScreenWidth() || m_player->c_transform->pos.x < 0) {
     //     m_player->c_transform->velocity *= -1;    
@@ -734,22 +734,24 @@ void Game::s_movement() {
         p->c_transform->velocity = { 0, 0 };
 
         if (p->c_input->up) {
-            p->c_transform->velocity.y = -5;
+            p->c_transform->velocity.y = -7;
         }
         if (p->c_input->down) {
-            p->c_transform->velocity.y = 5;
+            p->c_transform->velocity.y = 7;
         }
         if (p->c_input->right) {
-            p->c_transform->velocity.x = -5;
+            p->c_transform->velocity.x = -7;
         }
         if (p->c_input->left) {
-            p->c_transform->velocity.x = 5;
+            p->c_transform->velocity.x = 7;
         }
 
         p->c_transform->pos.x += p->c_transform->velocity.x;
         p->c_transform->pos.y += p->c_transform->velocity.y;
     }
     for (auto e : m_entities.get_entities("enemy")) {
+        e->c_transform->angle += 3.0f;
+        e->c_shape->circle.set_rotation(e->c_transform->angle);
         if (e->c_transform->pos.x > GetScreenWidth() || e->c_transform->pos.x < 0) {
             e->c_transform->velocity.x *= -1;
         }
