@@ -766,24 +766,13 @@ void Game::s_movement() {
 
 
 int main(void) {
-    // InitWindow(800, 450, "raylib example - tilemap");
-    // SetTargetFPS(30);
-
     // Vec2 v1(100, 200);
     // Vec2 v2(300, 100);
     // Vec2 v3;
     // v3 = v1 - v2;
     // std::cout << v3.x << " - " << v3.y << std::endl;
-
+    
     Game g("config.txt");
     g.run();
-
-    // while (!WindowShouldClose()) {
-    //     BeginDrawing();
-    //         DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
-    //     EndDrawing();
-    // }
-    // CloseWindow();
-
     return 0;
 }
