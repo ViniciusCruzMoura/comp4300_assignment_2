@@ -766,12 +766,6 @@ void Game::s_movement() {
 
 
 int main(void) {
-    // Vec2 v1(100, 200);
-    // Vec2 v2(300, 100);
-    // Vec2 v3;
-    // v3 = v1 - v2;
-    // std::cout << v3.x << " - " << v3.y << std::endl;
-    
     Game g("config.txt");
     g.run();
     return 0;
