@@ -109,8 +109,17 @@ void Game::s_render() {
     // DrawPolyLinesEx(m_player->c_transform->pos, m_player->c_shape->circle.get_point_count(), m_player->c_shape->circle.get_radius(), m_player->c_shape->circle.get_rotation(), m_player->c_shape->circle.get_outline_thickness(), m_player->c_shape->circle.get_outline_color());
 
     for (auto e : m_entities.get_entities()) {
-        DrawPoly(e->c_transform->pos, e->c_shape->circle.get_point_count(), e->c_shape->circle.get_radius(), e->c_shape->circle.get_rotation(), e->c_shape->circle.get_fill_color());
-        DrawPolyLinesEx(e->c_transform->pos, e->c_shape->circle.get_point_count(), e->c_shape->circle.get_radius(), e->c_shape->circle.get_rotation(), e->c_shape->circle.get_outline_thickness(), e->c_shape->circle.get_outline_color());    
+        DrawPoly(e->c_transform->pos, 
+                e->c_shape->circle.get_point_count(), 
+                e->c_shape->circle.get_radius(), 
+                e->c_shape->circle.get_rotation(), 
+                e->c_shape->circle.get_fill_color());
+        DrawPolyLinesEx(e->c_transform->pos, 
+                e->c_shape->circle.get_point_count(), 
+                e->c_shape->circle.get_radius(), 
+                e->c_shape->circle.get_rotation(), 
+                e->c_shape->circle.get_outline_thickness(), 
+                e->c_shape->circle.get_outline_color());
     }
     EndDrawing();
 }
