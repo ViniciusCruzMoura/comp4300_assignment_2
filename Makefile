@@ -1,7 +1,4 @@
-# Define required environment variables
-#------------------------------------------------------------------------------------------------
 PLATFORM              ?= PLATFORM_DESKTOP
-# Define project variables
 PROJECT_NAME          ?= game
 RAYLIB_PATH           ?= RAYLIB_PATH#C:\raylib\raylib#$(RAYLIB_PATH)
 # Build mode for project: DEBUG or RELEASE
