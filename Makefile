@@ -58,6 +58,13 @@ ifeq ($(PLATFORM),PLATFORM_DESKTOP)
             LDFLAGS += -Wl,--subsystem,windows
         endif
     endif
+    ifeq ($(PLATFORM_OS),LINUX)
+        LDLIBS = -lraylib -lGL -lm -lpthread -ldl -lrt
+        LDLIBS += -lX11
+        ifeq ($(RAYLIB_LIBTYPE),SHARED)
+            LDLIBS += -lc
+        endif
+    endif
 endif
 
 # Define libraries required on linking: LDLIBS
