@@ -13,6 +13,9 @@ ifeq ($(PLATFORM),PLATFORM_DESKTOP)
         PLATFORM_OS = WINDOWS
     else
         UNAMEOS = $(shell uname)
+	ifeq ($(UNAMEOS),Linux)
+            PLATFORM_OS = LINUX
+        endif
     endif
 endif
 
